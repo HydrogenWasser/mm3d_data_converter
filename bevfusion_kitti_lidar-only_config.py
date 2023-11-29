@@ -33,8 +33,8 @@ model = dict(
     pts_voxel_encoder=dict(type='HardSimpleVFE', num_features=4),
     pts_middle_encoder=dict(
         type='BEVFusionSparseEncoder',
-        in_channels=4, # 同上注释
-        sparse_shape=sparse_shape, # 看情况修改
+        in_channels=4,
+        sparse_shape=sparse_shape,
         order=('conv', 'norm', 'act'),
         norm_cfg=dict(type='BN1d', eps=0.001, momentum=0.01),
         encoder_channels=((16, 16, 32), (32, 32, 64), (64, 64, 128), (128,
